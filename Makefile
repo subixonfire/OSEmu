@@ -1,4 +1,5 @@
-CC=gcc
+CC = $(CROSS)gcc
+STRIP = $(CROSS)strip
 CFLAGS=-I.
 SRCS = aes.c des.c md5.c helpfunctions.c emulator.c OSEmu.c
 OBJS = $(SRCS:.c=.o)
@@ -15,7 +16,7 @@ all: OSEmu
 
 OSEmu: $(OBJS)
 	$(CC) -O2 -o $(BIN) $(OBJS) $(CFLAGS)	
-	strip $(BIN)
+	$(STRIP) $(BIN)
 	
 clean:
 	rm -rf $(BIN) $(OBJS) $(DEPS)
