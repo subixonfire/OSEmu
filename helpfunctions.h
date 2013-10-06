@@ -1,5 +1,5 @@
-void cs_log(const char* format, ... );
-void cs_log_debug(const char* format, ... );
+void cs_log(const char* format, ...);
+void cs_log_debug(const char* format, ...);
 int32_t boundary(int32_t exp, int32_t n);
 uint32_t b2i(int32_t n, const uchar *b);
 uchar *i2b_buf(int32_t n, uint32_t i, uchar *b);
